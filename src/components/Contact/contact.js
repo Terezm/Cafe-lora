@@ -3,6 +3,7 @@ import "./style.css";
 export const Contact = () => {
   const element = document.createElement("div");
   element.classList.add("container");
+  element.id = "contact";
   element.innerHTML = `
         
     <h2>Kde nás najdete</h2>

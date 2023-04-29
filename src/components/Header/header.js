@@ -3,10 +3,7 @@ import "./style.css";
 export const Header = () => {
   const element = document.createElement("header");
   element.innerHTML = `
-    
-     
-      
-        <div class="header__content container">
+    <div class="header__content container">
           <div class="site-logo"></div>
   
           <div class="navigation">
@@ -18,11 +15,20 @@ export const Header = () => {
               <a href="#contact">kontakt</a>
             </nav>
           </div>
-  
-        </div>
-      
-    
-    `;
+           </div>
+       `;
+  const navButton = element.querySelector(".nav-btn");
+  const navMenu = element.querySelector(".rollout-nav");
+
+  navButton.addEventListener("click", () => {
+    navMenu.classList.toggle("nav-closed");
+  });
+
+  navMenu.addEventListener("click", (event) => {
+    if (event.target.matches(".rollout-nav a")) {
+      navMenu.classList.add("nav-closed");
+    }
+  });
 
   return element;
 };

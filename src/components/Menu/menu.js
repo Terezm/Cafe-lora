@@ -3,10 +3,11 @@ import "./style.css";
 export const Menu = () => {
   const element = document.createElement("section");
   element.classList.add("menu");
+  element.id = "menu";
   element.innerHTML = `
 
 
-<div class="container">
+<div class="container"> 
           <h2>Naše nabídka</h2>
           <p class="menu-intro">
             Vyberte si z našeho interaktivního menu a nemusíte čekat na obsluhu
